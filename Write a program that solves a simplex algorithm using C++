@@ -1,0 +1,28 @@
+# U22CS1006-
+#include <iostream>
+
+int main() {
+    double a, b, x;
+    
+    // Input coefficients a and b
+    std::cout << "Enter the coefficient 'a': ";
+    std::cin >> a;
+    std::cout << "Enter the coefficient 'b': ";
+    std::cin >> b;
+    
+    // Check if a is not zero to avoid division by zero
+    if (a != 0) {
+        // Solve for x
+        x = -b / a;
+        std::cout << "The solution for the equation " << a << "x + " << b << " = 0 is x = " << x << std::endl;
+    } else {
+        // If a is zero, check if b is also zero
+        if (b == 0) {
+            std::cout << "The equation has infinitely many solutions because it simplifies to 0 = 0." << std::endl;
+        } else {
+            std::cout << "The equation has no solution because it simplifies to " << b << " = 0, which is a contradiction." << std::endl;
+        }
+    }
+    
+    return 0;
+}
